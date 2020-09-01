@@ -1,9 +1,333 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Hello Coursera</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		/* all with class="highlight"*/
+		.highlight{
+			background-color: green;
+		}
+
+		/*all p elements with class="highlight"*/
+		p.highlight {
+			font-style: italic;
+		}
+
+		/* All elements with class "highlight" as well as with class "mainpoint" */
+		.highlight.mainpoint{
+			color: red;
+			background-color: black;
+		}
+
+		/* any article element which is a direct child of a section element, i.e., any article element whose immediate parent is a section element */
+		section>article{
+			color: green;
+			font-size: 24px;
+		}
+
+		/* any h2 element which is a diretct child of a section element, i.e., any h2 element whose immediate parent is a section element*/
+		section>h2{
+			color: green;
+		}
+
+		/* all li elements that are inside a section element.*/
+		section li{
+			color: green;
+		}
+
+		a {
+			color: blue;
+			font-size: 15px;
+			width: 400px;
+		}
+
+		.blue {
+			color: blue;
+		}
+
+		h2, .green {
+			color: green;
+			font-size: 25px;
+			text-align: center;			
+		}
+
+		h1 {
+			color: red;
+			text-align: center;
+		}
+
+		header, footer {
+			font-size: 10px;
+			color: grey;
+			opacity: .8;
+		}
+
+		#box{
+			background-color: blue;
+			padding: 10px 10px 10px 10px;
+			border: 10px solid black;
+			margin: 40px;
+			width: 300px;
+			height: 100px;
+			box-sizing: border-box;
+			overflow: auto;
+		}
+
+		a:link, a:visited{
+			text-decoration: none;
+			background-color: white;
+			border: 2px solid blue;
+			color: black;
+			display: block;
+			width: 200px;
+			margin-bottom: 1px;
+		}
+
+		a:hover, a:active{
+			background-color: lightblue;
+			color: black;
+		}
+
+		#content {
+			background-color: green
+
+		}
+
+		#bg {
+			width: 250px;
+			height: 250px;
+			background-image: url("Me.jpg");
+			background-repeat: no-repeat;
+		}
+
+		.p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8 {
+			border: 1px solid black;
+			background-color: #A52A2A;
+			width: 90%;
+			height: 150%;
+			margin-right: auto;
+			margin-left: auto;
+			font-family: Helvetica;
+			color: white;
+		}
+        /*Simple responsive framework*/
+		.row {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+
+
+		/*Large devices only*/
+		@media(min-width: 1200px) {
+			.col-lg-1, .col-lg2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+				float: left;
+				border: 1px solid green;
+			}
+			.col-lg-1 {
+				width: 8.33%;
+			}
+			.col-lg-2 {
+				width: 16.66%;
+			}
+			.col-lg-3 {
+				width: 25%;
+			}
+			.col-lg-4 {
+				width: 33%;
+			}
+			.col-lg-5 {
+				width: 41.66%;
+			}
+			.col-lg-6 {
+				width: 50%;
+			}
+			.col-lg-7 {
+				width: 58.33%;
+			}
+			.col-lg-8 {
+				width: 66.66%;
+			}
+			.col-lg-9 {
+				width: 74.99%;
+			}
+			.col-lg-10 {
+				width: 83.33%;
+			}
+			.col-lg-11 {
+				width: 91.66%;
+			}
+			.col-lg-12 {
+				width: 100%;
+			}
+		}
+
+		/*Medium devices only*/
+		@media (min-width: 950px) and (max-width: 1199px) {
+			.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+				float: left;
+				border: 1px solid green;
+			}
+			.col-md-1 {
+				width: 8.33%;
+			}
+			.col-md-2 {
+				width: 16.66%;
+			}
+			.col-md-3 {
+				width: 25%;
+			}
+			.col-md-4 {
+				width: 33%;
+			}
+			.col-md-5 {
+				width: 41.66%;
+			}
+			.col-md-6 {
+				width: 50%;
+			}
+			.col-md-7 {
+				width: 58.33%;
+			}
+			.col-md-8 {
+				width: 66.66%;
+			}
+			.col-md-9 {
+				width: 74.99%;
+			}
+			.col-md-10 {
+				width: 83.33%;
+			}
+			.col-md-11 {
+				width: 91.66%;
+			}
+			.col-md-12 {
+				width: 100%;
+			}
+		}
+
+		.row {
+			
+		}
+
+		.row > div {
+			border: 2px solid red;
+			background-color: gray;
+		}
+	</style>
 </head>
 <body>
-<h1>Hello Coursera</h1>
+	<header>
+		
+		header element - some header information goes here. Usually consists of company logo some tag lines, etc. Sometimes, navigation is contained in the headder as well.
+		<nav>nav (short of navagition) element -usually contains links to different parts of the web site.
+		</nav>
+		
+	</header>
+	<h1 id="top"><u>Main heading of the page (hard not to have it)</u></h1>
+	<section id="section1">
+		<h2><u>SECTION 1</u></h2>
+		<article>article 1</article>
+		<article>article 2</article>
+		<article>article 3</article>
+	</section>
+	<aside>
+		<p class="blue">ASIDE - Some information that relates to the main topic, i.e., related posts.</p>
+	</aside>
+
+	<div>
+		<h2><u>My typical dinner shopping list</u></h2>
+		<ul>
+			<li>Milk</li>
+			<li>Donuts</li>
+			<li>
+				Cookies
+				<ul>
+					<li>Chocolate</li>
+					<li>Suger</li>
+					<li>Penut Butter</li>
+				</ul>
+			</li>
+			<li>Pepto Bismol</li>
+		</ul>
+	</div>
+
+	
+	<section id="section2">
+		<h2><u>Internal linking</u></h2>
+		<div>section 2</div>
+		<div class="red">We can link to a file in the same directory as this HTML file like this:</div>
+		<a href="same-directory.html" title="same dir link">linking to a file in the same directory</a>
+		<a href="same-directory.html" title="same dir link">
+			<div>DIV linking to a file in same folder</div>
+		</a>
+		<div>regular DIV element</div>
+	</section>
+	
+	<section id="section3">
+		<h2><u>External linking</u></h2>
+		<p>
+			lets link to a Facebook website!
+			<!--Comment-->
+			<a href="https://www.facebook.com/" target="_blank" title="External">Course Page</a>
+		</p>
+	</section>
+	<h2>Psudo class selectors</h2>
+	<h4>Links to sections</h4>
+	<section>
+		<ul>
+			<li><a href="#section1">Sample section</a></li>
+			<li><a href="#section2">Internal linking</a></li>
+			<li><a href="#section3">External linking</a></li>
+		</ul>
+	</section>
+
+
+	<h5>Subheading 5</h5>
+	<h6>Subheading 6</h6>
+	<div>
+		Back to top: <a href="#top">TOP</a>
+	</div>
+	<div id='box'>
+		<div id="content">
+			This is a random content to check the css box designing, I am just trying add more content and increse the size of the box so that i can use more tools and commands in css like overflow.
+		</div>
+	</div>
+	<div id="bg">
+		Its me!!
+	</div>
+	<h2></h2>
+	<div class="row">
+		<div class="col-lg-3 col-md-6"><p class="p1">Item 1</p></div>
+		<div class="col-lg-3 col-md-6"><p class="p2">Item 2 wow this is cool</p></div>
+		<div class="col-lg-3 col-md-6"><p class="p3">Item 3</p></div>
+		<div class="col-lg-3 col-md-6"><p class="p4">Item 4</p></div>
+		<div class="col-lg-3 col-md-6"><p class="p5">Item 5 This is cool</p></div>
+		<div class="col-lg-3 col-md-6"><p class="p6">Item 6</p></div>
+		<div class="col-lg-3 col-md-6"><p class="p7">Item 7</p></div>
+		<div class="col-lg-3 col-md-6"><p class="p8">Item 8</p></div>
+	</div>
+	<h2>Bootstrap Starter Page</h2>
+	<!--jQuery (Bootstrap JS plugins depend on it)-->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-4 col-md-4">Col 1</div>
+			<div class="col-lg-4 col-md-4">Col 2</div>
+			<div class="col-lg-4 col-md-4">Col 3</div>
+		</div>
+	</div>
+	<footer>
+		Any footer information 
+	</footer>
 </body>
 </html>
