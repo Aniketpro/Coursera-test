@@ -174,7 +174,7 @@ body {
   color: #fff;
   opacity: .8;
 }
-.category-tile:rhove {
+.category-tile:hover {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 
